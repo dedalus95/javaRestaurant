@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -91,7 +92,19 @@ public class gestioneRistorante {
 	public void setMenu(Vector<Piatto> menu) {
 		this.menu = menu;
 	}
-//	
+
+	
+	public int detectInputMismatch(int id, Scanner scanner) {
+		do {
+		    try {
+		        id = scanner.nextInt();
+		    } catch (InputMismatchException e){
+		        System.err.println("Customer IDs are numbers only. Try again.");
+		        scanner.next();
+		    }
+		} while (id<1);
+		return id;
+	}
 
 	public static void main(String[] args) {
 		
@@ -152,7 +165,10 @@ public class gestioneRistorante {
 				
 			case 2 :
 				System.out.println("INSERIRE L'ID DEL CLIENTE");
-				int id3 = tastiera.nextInt();
+				int id3 = 0;
+
+				id3 = nuovoRistorante.detectInputMismatch(id3, tastiera);
+				
 				if(nuovoRistorante.ricercaCliente(id3) != null) {
 					nuovoRistorante.rimuoviCliente(nuovoRistorante.ricercaCliente(id3));
 					System.out.println("Operazione riuscita.");
@@ -164,7 +180,10 @@ public class gestioneRistorante {
 				
 			case 3 :
 				System.out.println("INSERIRE L'ID DEL CLIENTE.");
-				int id = tastiera.nextInt();
+				int id = 0;
+				id = nuovoRistorante.detectInputMismatch(id, tastiera);
+				
+			
 				System.out.println("INSERIRE PIATTO");
 				String nomePiatto = tastiera.next().toUpperCase();
 				
@@ -175,12 +194,8 @@ public class gestioneRistorante {
 					System.err.println("NOME CLIENTE NON TROVATO.");
 				} 
 				else {
-					for(int i = 0; i < nuovoRistorante.menu.size(); i++) {
-						if (nuovoRistorante.menu.get(i).getNomePiatto().toUpperCase().equals(nomePiatto.toUpperCase())) {
-							nuovoRistorante.ricercaCliente(id).aggiungiOrdinazione(nuovoRistorante.menu.get(i));
-							System.out.println("Ordinazione effettuata.\n");
-						} 
-					}  
+					nuovoRistorante.ricercaCliente(id).aggiungiOrdinazione(nuovoRistorante.ricercaMenu(nomePiatto));
+					System.out.println("Ordinazione effettuata.");
 				}
 				
 				
@@ -188,29 +203,25 @@ public class gestioneRistorante {
 				
 			case 4 :
 				System.out.println("INSERIRE L'ID DEL CLIENTE.");
-				int id1 = tastiera.nextInt();
+				int id1 = 0;
+				id1 = nuovoRistorante.detectInputMismatch(id1, tastiera);
+
 				System.out.println("INSERIRE PIATTO");
 				String nomePiatto1 = tastiera.next().toUpperCase();
 				
-				 if (nuovoRistorante.ricercaCliente(id1) == null) {
-					System.err.println("NOME CLIENTE NON TROVATO.");
-				} 
 				
-				 else if(nuovoRistorante.ricercaCliente(id1).ricercaPiatto(nomePiatto1) == null) {
-					System.err.println("NOME PIATTO NON TROVATO.");
-				}
+				if(nuovoRistorante.ricercaCliente(id1) == null) {
+					System.err.println("ID CLIENTE NON TROVATO.");
+				} 
+				else if (nuovoRistorante.ricercaCliente(id1).ricercaPiatto(nomePiatto1) == null) {
+					System.err.println("ORDINAZIONE NON TROVATA.");
 
+				}
 				else {
-					
-					for(int i = 0; i < nuovoRistorante.ricercaCliente(id1).getListaOrdinazioni().size(); i++) {
-						if(nomePiatto1.equals(nuovoRistorante.ricercaCliente(id1).ricercaPiatto(nomePiatto1).getNomePiatto().toUpperCase())) {
-							nuovoRistorante.ricercaCliente(id1).rimuoviPiatto(i);
-							System.out.println("Operazione riuscita\n");
-							}
-					
-						} 
-					}
-		
+						nuovoRistorante.ricercaCliente(id1).getListaOrdinazioni().remove(nuovoRistorante.ricercaCliente(id1).ricercaPiatto(nomePiatto1));
+						System.out.println("Operazione riuscita.");
+				}
+				
 				break;
 				
 			case 5 :
