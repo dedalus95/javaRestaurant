@@ -3,7 +3,7 @@
 #footer {
   width: 100%;
   height: 10%;
-  background-color: black;
+  background-color: #0F0E0E;
   position: relative;
   bottom: 80px;
   display: flex;
@@ -22,7 +22,7 @@
 }
 
 #bottoni {
-  background-color: #E5625E;  
+  background-color: #0F0E0E;  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,11 +36,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: black solid 1px;
+  border: 0F0E0E solid 1px;
 }
 
 #totali div{
-  background-color: #999799;
+  background-color: #0F0E0E;
 }
 
 

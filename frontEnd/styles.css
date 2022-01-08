@@ -3,6 +3,7 @@
 
 * {
   border-radius: 5px;
+  color: #8B9A46;
 }
 
 html, body {
@@ -16,17 +17,17 @@ html, body {
 }
 
 .container-fluid{
-  border: solid black 1px;
+  border: solid #0F0E0E 1px;
   width: 100% !important;
   height: 100% !important;
-  background-color: black;
+  background-color: #0F0E0E;
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
 }
 
 .container-fluid div {
-  border: black solid 1px;
+  border: #0F0E0E solid 1px;
 }
 
 .container-fluid div {
@@ -40,7 +41,7 @@ html, body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: #E5625E;
+  background-color: #0F0E0E;
 }
 
 #menu {
@@ -52,7 +53,7 @@ html, body {
 #filtered-elements {
   width: 80%;
   height: 100%;
-  background-color: white;
+  background-color: #8B9A46;
 
 }
 
@@ -63,18 +64,19 @@ html, body {
   align-items: flex-start;
   align-content: flex-start;
   justify-content: center;
+  
 }
 
 #filtered-elements div {
  min-width: 100px;
  max-width: 100px;
  max-height: 100px;
- background-color: #999799;
+ background-color: #541212;
 }
 
 
 #select-elements {
-  background-color: white;
+  background-color: #8B9A46;
   height: 100%;
   width: 20%;
   display: flex;
@@ -92,12 +94,12 @@ html, body {
 }
 
 #select-elements div {
-  background-color: #E5625E;
+  background-color: #0F0E0E;
 
 }
 
 #pizze {
-  background-color: #999799 !important;
+  background-color: #541212 !important;
 }
 
 
@@ -116,20 +118,29 @@ html, body {
 }
 
 #receipt {
-  background-color: white;
+  background-color: #8B9A46;
   height: 50%;
   width: 100%;
   overflow-y: scroll;
 }
 
 thead {
-  background-color: #E5625E;
+  background-color: #0F0E0E;
 }
 
 thead th{
   border-radius: 0px;
+  color: #8B9A46;
 }
 
+tbody tr:last-child {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+tbody tr td, tbody tr th {
+  color: #541212;
+}
 
 i {
   font-size: 50px;
@@ -140,8 +151,8 @@ i {
 
 table i {
   font-size: 20px;
+  color: #541212;
 }
 
 
 
-  
