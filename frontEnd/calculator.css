@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Orbitron&family=Ubuntu:wght@300&display=swap');
+
+ 
+
+
+
+#calculator-digits-operators-display {
+  display: flex;
+  flex-flow: row;
+  height: 50%;
+  width: 100%;
+}
+
+#calculator-digits-operators {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 50%;
+  height: 100%;
+}
+
+#digits, #operators {
+  height: 100%;
+  background-color: black;
+
+}
+
+#digits {
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#digits div {
+  background-color: #00AF54;
+  min-width: 33.333333%;
+  max-width: 33.3333333%;
+  height: 25.1%;
+  flex: 1;
+  border-radius: 5px;
+}
+
+
+#operators {
+  width: 20%;
+  display: flex;
+  flex-flow: column;
+}
+
+#operators div {
+  flex: 1;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #FFD639;
+}
+
+#digits div, #operators div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#calculator-display {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+#calculator-display div {
+  width: 100%;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#nome-cliente {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+#display-result {
+  background-color: #007CBE;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 30px;
+}

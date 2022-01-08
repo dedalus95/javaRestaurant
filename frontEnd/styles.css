@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Ubuntu:wght@300&display=swap');
+
+* {
+  border-radius: 5px;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold !important;
+}
+
+.container-fluid{
+  border: solid black 1px;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #999799;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.container-fluid div {
+  border: black solid 1px;
+}
+
+.container-fluid div {
+  width: 95%;
+  height: 90%;
+}
+
+#icons-bar {
+  width: 15%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #E5625E;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+
+}
+
+#filtered-elements {
+  width: 80%;
+  height: 100%;
+  background-color: white;
+
+}
+
+
+#filtered-elements {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+#filtered-elements div {
+ min-width: 100px;
+ max-width: 100px;
+ max-height: 100px;
+ background-color: #999799;
+}
+
+
+#select-elements {
+  background-color: white;
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+}
+
+#select-elements div, #filtered-elements div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+#select-elements div {
+  background-color: #E5625E;
+
+}
+
+#pizze {
+  background-color: #999799 !important;
+}
+
+
+#cliente {
+  display: flex;
+  flex-direction: column;
+}
+
+
+#name-div {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+#receipt {
+  background-color: white;
+  height: 50%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+thead {
+  background-color: #E5625E;
+}
+
+thead th{
+  border-radius: 0px;
+}
+
+
+i {
+  font-size: 50px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+
+table i {
+  font-size: 20px;
+}
+
+
+
+  

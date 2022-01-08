@@ -1,0 +1,49 @@
+
+
+#footer {
+  width: 100%;
+  height: 10%;
+  background-color: #F5E9E2;
+  position: relative;
+  bottom: 80px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#totali, #bottoni {
+
+  height: 100%;
+}
+
+#totali {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 53.2%;
+}
+
+#bottoni {
+  background-color: #E5625E;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46.8%;
+}
+
+
+#totali div {
+  width: 33.33333%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: black solid 1px;
+}
+
+#totali div{
+  background-color: #999799;
+}
+
+
+#footer i {
+  margin: 20px;
+}
