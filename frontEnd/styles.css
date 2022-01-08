@@ -19,7 +19,7 @@ html, body {
   border: solid black 1px;
   width: 100% !important;
   height: 100% !important;
-  background-color: #999799;
+  background-color: black;
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
