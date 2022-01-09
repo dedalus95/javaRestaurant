@@ -37,7 +37,7 @@
   height: 25.1%;
   flex: 1;
   border-radius: 5px;
-
+  cursor: pointer;
 }
 
 
@@ -52,6 +52,7 @@
   width: 100%;
   border-radius: 5px;
   background-color: #541212;
+  cursor: pointer;
 }
 
 #digits div, #operators div {
