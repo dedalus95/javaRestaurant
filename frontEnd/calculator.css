@@ -27,16 +27,17 @@
   width: 80%;
   display: flex;
   flex-flow: row wrap;
-  background-color:#0F0E0E;
+  background-color:#541212;
 }
 
 #digits div {
   background-color: #0F0E0E;
+  border: #541212 solid 1px;
   min-width: 33.333333%;
   max-width: 33.3333333%;
   height: 25.1%;
   flex: 1;
-  border-radius: 5px;
+  border-radius: 7px;
   cursor: pointer;
 }
 
